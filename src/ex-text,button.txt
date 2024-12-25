@@ -1,0 +1,39 @@
+
+
+import React from 'react';
+import {Text,View} from 'react-native';
+import Button from './src/components/Button';
+import Colors from './assets/Colors';
+import TextBox from './src/components/TextBox';
+
+function App() {
+
+  return (
+    <View style={{justifyContent:'center',alignItems:'center',height:'100%',backgroundColor:'white'}}>
+     <Text style={{fontSize:20,paddingBottom:5,color:'pink'}}>WELCOME TO GWALIORBASKET APP </Text>
+     <Text style={{fontSize:18,paddingBottom:40}}>MADE BY PARITOSH SHARMA </Text>
+     
+     <View style={{width:300,height:80}}>
+     <TextBox error={false} placeHolder={'Enter your secret name'} icon={'user-secret'}/>
+    </View>
+    
+    <View style={{width:300,height:80}}>
+     <TextBox error={false}  placeHolder={'Enter your secret code'}   icon={'github-alt'}/>
+    </View>
+
+    <View style={{width:300,height:80}}>
+     <TextBox error={false} password={true} placeHolder={'Enter your secret pin'}  icon={'key'}/>
+    </View>
+
+     <View>
+     <Button title={'Click here'} bgColor={Colors.darkGreen} width={170} foreColor={Colors.white} />
+     </View>
+    
+    </View>
+    
+  )
+}
+
+
+
+export default App;
